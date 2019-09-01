@@ -11,7 +11,16 @@ api = tweepy.API(auth)
 
 # Function to create a valid portmanteau
 def handlePortmanteau(tweet_text):
+	word1 = tweet.split()[1]
+	word2 = tweet.split()[2]
+	portmanteau = PortmanteauCreator.portmanteau(word1, word2)
+	if portmanteau == "n/a":  # Somehow the input word(s) were invalid; don't tweet
+		return
+	tweetPortmanteau(word1, word2, portmanteau)
 
+# Function to handle tweeting the completed portmanteau
+def tweetPortmanteau(word1, word2, portmanteau):
+	
 
 # A class inheriting from tweepy.StreamListener
 class BotStreamer(tweepy.StreamListener):
