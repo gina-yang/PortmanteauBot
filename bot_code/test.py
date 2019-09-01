@@ -75,6 +75,6 @@ def main():
     if pme == "n/a":
         print("No portmanteau found.")
     else:
-        print(pme)
+        print(word1 + " + " + word2 + " = " + pme)
 
 main()
