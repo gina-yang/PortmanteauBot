@@ -66,3 +66,15 @@ def portmanteau(string1, string2):
         return sameVowelComp(string1, string2)
     else:  # Type 4 (everything else)
         return diffVowelComp(vowelFinder(string1), vowelFinder(string2), string1, string2)
+
+def main():
+    word1 = input("Enter a word: ")
+    word2 = input("Enter another word: ")
+
+    pme = portmanteau(word1, word2)
+    if pme == "n/a":
+        print("No portmanteau found.")
+    else:
+        print(pme)
+
+main()
